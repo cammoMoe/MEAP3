@@ -11,6 +11,7 @@
 \usepackage[scriptsize]{caption}
 \usepackage[danish,textsize=tiny,backgroundcolor=red,bordercolor=blue]{todonotes}
 \usepackage[isbn,issn]{dk-bib}
+
 \interfootnotelinepenalty=10000
 \usepackage{graphicx}
 \usepackage{caption}
@@ -18,6 +19,15 @@
 \graphicspath{ {./Pics/} }
 \addto\captionsdanish{ \renewcommand\abstractname{Abstract} }
 \usepackage{float}
+
+
+%biblatex stuff
+\usepackage[backend=bibtex,
+			sorting = nty,
+			citestyle=authoryear 
+			]{biblatex}
+\bibliography{LiteratureList}
+\usepackage{apalike}
 %-----------------------------------------------------
 \newcommand{\doctitle}{Project 3}
 \newcommand{\docsubject}{Medialogy - P3}
@@ -101,6 +111,7 @@ CHANGE THIS BEFORE HANDIN}
 \newcommand{\hsp}{\hspace{20pt}}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 
+\usepackage[nottoc]{tocbibind}
 
 
 \begin{document}
@@ -125,12 +136,12 @@ CHANGE THIS BEFORE HANDIN}
 
 \include{introduction}
 
-
-
 %includes end
 
 \newpage
-\bibliographystyle{apalike}
-\bibliography{LiteratureList} 
+%\bibliography{LiteratureList}
+%\bibliographystyle{apalike}
+
+\printbibliography
 \end{document}
 
